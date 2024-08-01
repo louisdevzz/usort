@@ -8,15 +8,17 @@ const LogInPage = () => {
     return(
         <div className="flex flex-col h-screen">
             <LogInHeader />
-            <div className="flex flex-grow justify-around items-center w-full px-10">
+            <div className="flex flex-grow justify-around items-center w-full px-40 gap-x-20">
                 <div className="flex justify-end w-1/2">
-                    <img src="/assets/image/database.png" alt="database" className="max-w-full h-auto" />
+                    <img src="/assets/image/database.png" alt="database" />
                 </div>
                 <div className="flex justify-start w-1/2">
                     <LogIn />
                 </div>
+             </div>   
+            <div>
+                <LogInFooter />
             </div>
-            <LogInFooter />
         </div>
     )
 }
