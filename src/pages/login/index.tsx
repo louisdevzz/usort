@@ -1,4 +1,5 @@
 import LogInHeader from "@/components/LogInHeader";
+import LogInFooter from "@/components/LogInFooter";
 import LogIn from "@/components/LogIn";
 import { useState } from "react";
 
@@ -11,6 +12,9 @@ const LogInPage = () => {
                 <img src="/assets/image/database.png" alt="database" />
             </div>
             <LogIn/>
+            <div className="-mt-20">
+                <LogInFooter/>
+            </div>
         </div>
     )
 }
