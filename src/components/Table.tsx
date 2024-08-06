@@ -5,14 +5,28 @@ const Table = () =>{
     const [isShow,setIsShow]= useState<boolean>(false);
     return(
         <div className="relative mt-2 overflow-x-auto shadow-md sm:rounded-lg">
-            <div className="flex flex-row gap-3 px-5 py-3 items-center">
-                <img width={30} src="/assets/icon/square.svg" alt="square" />
-                <span className="font-semibold">4.1 Nhập hồ sơ học sinh</span>
+            <div>
+                <div className="flex flex-row">
+                    <img width={30} src="/assets/icon/square.svg" alt="square" />
+                    <span className="font-semibold">4.1 Nhập hồ sơ học sinh</span>
+                </div>
+                <div className="flex flex-row">
+                    <div className="rounded-lg bg-green-600 p-2">
+                        <button>
+                            <span>Nhap ho so hoc sinh</span>
+                        </button>
+                    </div>
+                    <div className="rounded-lg bg-green-600 p-2">
+                        <button>
+                            <span>Xuat excel</span>
+                        </button>
+                    </div>
+                </div>
             </div>
             <div className="flex flex-row gap-3 items-center justify-between px-5">
                 <div className="flex flex-row gap-3 items-center">
                     <div className="flex flex-row gap-5 py-3 items-center">
-                        <span>Khối: </span>
+                        <span>Khối: </span>s
                         <div className="group relative">
                             <button className="text-black gap-5 text-sm justify-between flex w-44 px-3 py-2 rounded-md border border-gray-300 h-8 flex-row items-center" type="button">
                                 <span>Khoi 6 </span>
@@ -58,16 +72,6 @@ const Table = () =>{
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className=" bg-green-600 p-2">
-                    <button>
-                        <span>Nhap ho so hoc sinh</span>
-                    </button>
-                </div>
-                <div className=" bg-green-600 p-2">
-                    <button>
-                        <span>Xuat excel</span>
-                    </button>
                 </div>
             </div>
             <table className="w-full text-sm text-left rtl:text-right text-gray-500 ">

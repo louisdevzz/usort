@@ -1,7 +1,15 @@
+"use client"
 import { useState } from "react";
 
 const LogIn = () =>{
+    const captchaDefaut = Math.random().toString(36).substring(8);
     const [isShow, setIsShow] = useState(false);
+    const [captcha, setCaptCha] = useState(captchaDefaut);
+
+    const refreshCaptcha = () =>{
+        setCaptCha(Math.random().toString(36).substring(8));
+    }
+
     return(
         <div className="w-full">
             <div className="flex flex-row items-center">
@@ -34,7 +42,6 @@ const LogIn = () =>{
                         id="password" 
                         className="rounded-none rounded-s-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         placeholder="•••••••••" 
-                        required 
                     />
                     <span className="inline-flex items-center px-3 text-sm bg-gray-200 border border-gray-300 rounded-s-0 border-s-0 rounded-e-md dark:bg-gray-600 dark:border-gray-600">
                         <img width={30} src="/assets/icon/lock.svg" alt="lock" className="w-4 h-4" />
@@ -44,26 +51,39 @@ const LogIn = () =>{
                     <span className="text-blue-700 font-semibold">THÔNG TIN ĐƠN VỊ</span>
                 </div>
                 <div className="flex py-1">
-                    <input type="text" id="educational-stage" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Trung học cơ sở" required />
+                    <input type="text" id="educational-stage" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Trung học cơ sở" />
+                </div> 
+                <div className="flex bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg flex flex-row w-full relative">
+                    <input type="text" id="place" className="bg-transparent border-none block w-full p-2.5 focus:border-none outline-none" placeholder="Chọn phòng"  />
+                    <div onClick={()=>setIsShow((prv)=>!prv)} className="border-l cursor-pointer border-gray-300 flex items-center justify-center px-3">
+                        <img width={13} src="/assets/icon/arrow-down.svg" alt="arrow" />
+                    </div>
+                    {isShow&&
+                        <div className="absolute top-10 left-0 w-full max-h-[200px] bg-white rounded-lg border border-gray-300 p-3">
+                            <ul>
+                                <li className="hover:bg-gray-200 cursor-pointer p-2 rounded-lg">
+                                    <span>Truong THPT TAN HUNG</span>
+                                </li>
+                                <li className="hover:bg-gray-200 cursor-pointer p-2 rounded-lg">
+                                    <span>Truong THPT TAN HUNG</span>
+                                </li>
+                            </ul>
+                        </div>
+                    }
                 </div> 
                 <div className="flex py-1">
-                    <input type="text" id="place" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Chọn phòng" required />
-                </div> 
-                <div className="flex py-1">
-                    <input type="text" id="school" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Trung học cở sở Tân Tạo" required />
+                    <input type="text" id="school" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Trung học cở sở Tân Tạo" />
                 </div>
                 <div className="flex flex-row justify-between items-start py-2">
                     {/* Left */}
                     <div className="flex flex-row items-center">
                         <div className="flex py-1">
-                            <input type="text" id="verify" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Nhập mã xác thực" required />
+                            <input type="text" id="verify" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Nhập mã xác thực"  />
                         </div>
                     </div>
                     {/* Right */}
                     <div className="flex flex-row">
-                        <span>
-                            Mã xác thực????
-                        </span>
+                        <input type="text" value={captcha} disabled className="bg-black w-20 text-center p-2 select-none text-white" />
                     </div>
                 </div>
                 <div className="flex flex-row justify-between items-start py-2">
