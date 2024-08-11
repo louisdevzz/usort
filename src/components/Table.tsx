@@ -4,21 +4,21 @@ import { useState } from "react";
 const Table = () =>{
     const [isShow,setIsShow]= useState<boolean>(false);
     return(
-        <div className="relative mt-2 overflow-x-auto shadow-md sm:rounded-lg">
-            <div>
-                <div className="flex flex-row">
+        <div>
+            <div className="flex justify-between px-8 py-2 items-center shadow-md">
+                <div className="flex flex-row items-center px-1 gap-1 ">
                     <img width={30} src="/assets/icon/square.svg" alt="square" />
-                    <span className="font-semibold">4.1 Nhập hồ sơ học sinh</span>
+                    <span className="font-semibold">4.1 Hồ sơ học sinh</span>
                 </div>
-                <div className="flex flex-row">
+                <div className="flex flex-row items-center gap-2">
                     <div className="rounded-lg bg-green-600 p-2">
                         <button>
-                            <span>Nhap ho so hoc sinh</span>
+                            <span>Nhập hồ sơ học sinh</span>
                         </button>
                     </div>
                     <div className="rounded-lg bg-green-600 p-2">
                         <button>
-                            <span>Xuat excel</span>
+                            <span>Xuất excel</span>
                         </button>
                     </div>
                 </div>
@@ -26,35 +26,35 @@ const Table = () =>{
             <div className="flex flex-row gap-3 items-center justify-between px-5">
                 <div className="flex flex-row gap-3 items-center">
                     <div className="flex flex-row gap-5 py-3 items-center">
-                        <span>Khối: </span>s
+                        <span>Khối: </span>
                         <div className="group relative">
                             <button className="text-black gap-5 text-sm justify-between flex w-44 px-3 py-2 rounded-md border border-gray-300 h-8 flex-row items-center" type="button">
-                                <span>Khoi 6 </span>
+                                <span>Khối 6 </span>
                                 <img width={10} src="/assets/icon/arrow-down.svg" alt="arrow" />
                             </button>
                             <div id="dropdown" className="z-10 bg-white invisible group-hover:visible  rounded-lg shadow w-40 absolute top-8 left-0">
                                 <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
                                     <li className="block px-4 py-2 hover:bg-gray-100">
-                                        <span>Khoi 6</span>
+                                        <span>Khối 6</span>
                                     </li>    
                                     <li className="block px-4 py-2 hover:bg-gray-100">
-                                        <span>Khoi 7</span>
+                                        <span>Khối 7</span>
                                     </li>
                                     <li className="block px-4 py-2 hover:bg-gray-100">
-                                        <span>Khoi 8</span>
+                                        <span>Khối 8</span>
                                     </li>
                                     <li className="block px-4 py-2 hover:bg-gray-100">
-                                        <span>Khoi 9</span>
+                                        <span>Khối 9</span>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div className="flex flex-row gap-5 px-5 py-3 items-center">
-                        <span>Lop: </span>
+                        <span>Lớp: </span>
                         <div className="group relative">
                             <button className="text-black gap-5 text-sm justify-between flex w-44 px-3 py-2 rounded-md border border-gray-300 h-8 flex-row items-center" type="button">
-                                <span>Lop </span>
+                                <span>Lớp </span>
                                 <img width={10} src="/assets/icon/arrow-down.svg" alt="arrow" />
                             </button>
                             <div id="dropdown" className="z-10 bg-white invisible group-hover:visible  rounded-lg shadow w-40 absolute top-8 left-0">
@@ -141,19 +141,19 @@ const Table = () =>{
                             <span>123456</span>
                         </td>
                         <td className="px-6 py-4">
-                            <span>Ho Phuoc Lanh</span>
+                            <span>Hồ Phước Lành</span>
                         </td>
                         <td className="px-6 py-4">
                             <span>1/1/1999</span>
                         </td>
                         <td className="px-6 py-4">
-                            <span>Nu</span>
+                            <span>Nữ</span>
                         </td>
                         <td className="px-6 py-4">
                             <span>Kinh</span>
                         </td>
                         <td className="px-6 py-4">
-                            <span>Dang hoc</span>
+                            <span>Đang học</span>
                         </td>
                     </tr>
                     <tr className="bg-white border border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -181,19 +181,19 @@ const Table = () =>{
                             <span>123456</span>
                         </td>
                         <td className="px-6 py-4">
-                            <span>Ho Phuoc Lanh</span>
+                            <span>Hồ Phước Lành</span>
                         </td>
                         <td className="px-6 py-4">
                             <span>1/1/1999</span>
                         </td>
                         <td className="px-6 py-4">
-                            <span>Nu</span>
+                            <span>Nữ</span>
                         </td>
                         <td className="px-6 py-4">
                             <span>Kinh</span>
                         </td>
                         <td className="px-6 py-4">
-                            <span>Dang hoc</span>
+                            <span>Đang học</span>
                         </td>
                     </tr>
                     <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -221,19 +221,19 @@ const Table = () =>{
                             <span>123456</span>
                         </td>
                         <td className="px-6 py-4">
-                            <span>Ho Phuoc Lanh</span>
+                            <span>Hồ Phước Lành</span>
                         </td>
                         <td className="px-6 py-4">
                             <span>1/1/1999</span>
                         </td>
                         <td className="px-6 py-4">
-                            <span>Nu</span>
+                            <span>Nữ</span>
                         </td>
                         <td className="px-6 py-4">
                             <span>Kinh</span>
                         </td>
                         <td className="px-6 py-4">
-                            <span>Dang hoc</span>
+                            <span>Đang học</span>
                         </td>
                     </tr> 
                 </tbody>
