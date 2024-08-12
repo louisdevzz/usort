@@ -5,6 +5,12 @@ const LogIn = () =>{
     const captchaDefaut = Math.random().toString(36).substring(8);
     const [isShow, setIsShow] = useState(false);
     const [captcha, setCaptCha] = useState(captchaDefaut);
+    const [selectedPlace, setSelectedPlace] = useState<string>(""); // State to store the selected school
+
+    const handleSelect = (place: string) => {
+        setSelectedPlace(place); // Update the input with the selected place
+        setIsShow(false); // Close the dropdown
+    };
 
     const refreshCaptcha = () =>{
         setCaptCha(Math.random().toString(36).substring(8));
@@ -54,22 +60,36 @@ const LogIn = () =>{
                     <input type="text" id="educational-stage" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Trung học cơ sở" />
                 </div> 
                 <div className="flex bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg flex flex-row w-full relative">
-                    <input type="text" id="place" className="bg-transparent border-none block w-full p-2.5 focus:border-none outline-none" placeholder="Chọn phòng"  />
-                    <div onClick={()=>setIsShow((prv)=>!prv)} className="border-l cursor-pointer border-gray-300 flex items-center justify-center px-3">
+                    <input
+                        type="text"
+                        id="place"
+                        value={selectedPlace}
+                        className="bg-transparent border-none block w-full p-2.5 focus:border-none outline-none"
+                        placeholder="Chọn phòng"
+                        readOnly
+                        onClick={() => setIsShow(!isShow)}
+                    />
+                    <div onClick={() => setIsShow(!isShow)} className="border-l cursor-pointer border-gray-300 flex items-center justify-center px-3">
                         <img width={13} src="/assets/icon/arrow-down.svg" alt="arrow" />
                     </div>
-                    {isShow&&
-                        <div className="absolute top-10 left-0 w-full max-h-[200px] bg-white rounded-lg border border-gray-300 p-3">
+                    {isShow && (
+                        <div className="absolute top-10 left-0 w-full max-h-[200px] bg-white rounded-lg border border-gray-300 p-3 overflow-y-auto">
                             <ul>
-                                <li className="hover:bg-gray-200 cursor-pointer p-2 rounded-lg">
-                                    <span>Truong THPT TAN HUNG</span>
+                                <li
+                                    className="hover:bg-gray-200 cursor-pointer p-2 rounded-lg"
+                                    onClick={() => handleSelect("Truong THPT TAN HUNG")}
+                                >
+                                    <span>Trường THPT Tân Hưng</span>
                                 </li>
-                                <li className="hover:bg-gray-200 cursor-pointer p-2 rounded-lg">
-                                    <span>Truong THPT TAN HUNG</span>
+                                <li
+                                    className="hover:bg-gray-200 cursor-pointer p-2 rounded-lg"
+                                    onClick={() => handleSelect("Truong THPT TAN HUNG")}
+                                >
+                                    <span>Trường THPT Năng khiếu ĐH Tân Tạo</span>
                                 </li>
                             </ul>
                         </div>
-                    }
+                    )}
                 </div> 
                 <div className="flex py-1">
                     <input type="text" id="school" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Trung học cở sở Tân Tạo" />
