@@ -52,7 +52,7 @@ const AddStudent = () => {
                     </div>
                 </div>
                 <div className="font-semibold text-left">
-                    <div className="flex items-center justify-between gap-20 py-3">
+                    <div className="flex items-center justify-between gap-32 py-3">
                         <span className="text-right"> Khối học </span>
                         <div className="flex bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg flex flex-row relative" style={{ width: '500px' }}>
                             <input
@@ -99,7 +99,7 @@ const AddStudent = () => {
                             )}
                         </div>
                     </div>
-                    <div className="flex items-center justify-between gap-20 py-3">
+                    <div className="flex items-center justify-between gap-32 py-3">
                         <span className="text-right"> Lớp học </span>
                         <div className="flex bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg flex flex-row relative" style={{ width: '500px' }}>
                             <input
@@ -145,6 +145,24 @@ const AddStudent = () => {
                                 </div>
                             )}
                         </div>
+                    </div>
+                    <div className="flex items-center justify-between gap-32 py-3">
+                        <span className="text-right"> Họ và tên </span>
+                        <input
+                            type="text"
+                            id="fullname"
+                            className="rounded-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-1 text-sm border-gray-300 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" style={{ width: '500px' }}
+                            placeholder="Nguyễn Văn A"
+                        />
+                    </div>
+                    <div className="flex items-center justify-between gap-32 py-3">
+                        <span className="text-right"> Tên gọi khác </span>
+                        <input
+                            type="text"
+                            id="nickname"
+                            className="rounded-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-1 text-sm border-gray-300 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" style={{ width: '500px' }}
+                            placeholder="Văn A"
+                        />
                     </div>
                 </div>
             </div>
