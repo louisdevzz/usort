@@ -14,9 +14,11 @@ const SubHeader = () =>{
                     <div id="dropdown" className="z-10 bg-white invisible group-hover:visible rounded-lg shadow w-40 absolute top-5 left-0">
                         <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
                             <li>
-                                <button onClick={()=>setIsShow(true)} className="block px-4 py-2 hover:bg-gray-100">
-                                    Thêm trường học
-                                </button>
+                                <a href="#">
+                                    <button onClick={()=>setIsShow(true)} className="block px-4 py-2 hover:bg-gray-100">
+                                        Thêm trường học
+                                    </button>
+                                </a>
                             </li>
                             <li>
                                 <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
@@ -91,49 +93,49 @@ const SubHeader = () =>{
                     <div id="dropdown" className="z-10 bg-white invisible group-hover:visible rounded-lg shadow w-80 absolute top-5 left-0">
                         <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
                             <li>
-                                <button className="block px-4 py-2 hover:bg-gray-100">
+                                <a href="#" className="block px-4 py-2 hover:bg-gray-100">
                                     4.1 Hồ sơ học sinh
-                                </button>
+                                </a>
                             </li>
                             <li>
-                                <button onClick={()=>setIsShow(true)} className="block px-4 py-2 hover:bg-gray-100">
+                                <a href="#" className="block px-4 py-2 hover:bg-gray-100">
                                     4.2 Quản lý biến động học sinh
-                                </button>
+                                </a>
                             </li>
                             <li>
-                                <button className="block px-4 py-2 hover:bg-gray-100">
+                                <a href="#" className="block px-4 py-2 hover:bg-gray-100">
                                     4.3 Kết quả học tập rèn luyện
-                                </button>
+                                </a>
                             </li>
                             <li>
-                                <button className="block px-4 py-2 hover:bg-gray-100">
+                                <a href="#" className="block px-4 py-2 hover:bg-gray-100">
                                     4.4 Khen thưởng, kỷ luật
-                                </button>
+                                </a>
                             </li>
                             <li>
-                                <button className="block px-4 py-2 hover:bg-gray-100">
+                                <a href="#" className="block px-4 py-2 hover:bg-gray-100">
                                     4.5 Quản lý hoàn thành chương trình Tiểu học
-                                </button>
+                                </a>
                             </li>
                             <li>
-                                <button className="block px-4 py-2 hover:bg-gray-100">
+                                <a href="#" className="block px-4 py-2 hover:bg-gray-100">
                                     4.6 Công tác học sinh
-                                </button>
+                                </a>
                             </li>
                             <li>
-                                <button className="block px-4 py-2 hover:bg-gray-100">
+                                <a href="#" className="block px-4 py-2 hover:bg-gray-100">
                                     4.7 Quản lý sức khỏe học sinh
-                                </button>
+                                </a>
                             </li>
                             <li>
-                                <button className="block px-4 py-2 hover:bg-gray-100">
+                                <a href="#" className="block px-4 py-2 hover:bg-gray-100">
                                     4.8 Chương trình Sóng và máy tính cho em
-                                </button>
+                                </a>
                             </li>
                             <li>
-                                <button className="block px-4 py-2 hover:bg-gray-100">
+                                <a href="#" className="block px-4 py-2 hover:bg-gray-100">
                                     4.9 Thông tin học sinh liên quan Covid-19
-                                </button>
+                                </a>
                             </li>
                         </ul>
                     </div>
